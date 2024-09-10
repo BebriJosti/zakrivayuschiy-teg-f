@@ -15,6 +15,60 @@
 */
 
 .page {
+  inline-size: clamp(375px, 48.61vw, 100%);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font);
+  margin:0 auto;
+  background-image: var(--bkg-image);
+  background-attachment: fixed;
+  padding: 102px 0 103px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+font-family: var(--accent-font);
+align-items: center;
+border: 2px solid var(--accent-color);
+background-color: var(--bkg-color);
+margin:0 0 100px 0;
+} 
+
+
+.head_title {
+  padding-top: clamp(7.5rem, 0rem + 100vw, 8.5rem);
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.head_subtitle {
+  font-size: clamp(0.875rem, 0rem + 1600vw, 1.438rem);
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.theme-menu {
+  padding: 21px 0;
+  padding-left: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.theme-menu__button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
 }
