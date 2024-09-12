@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
-    <link rel="icon" type="image/x-icon" href="./svg/favicon.svg">
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
-    <header class="header">
+    <header class="header box">
       <h1 class="head_title">&lt;/HTML&gt;</h1>
       <h2 class="head_subtitle">закрывающий тег</h2>
       <nav class="theme-menu header__theme-menu">
@@ -44,7 +44,37 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="cards">
+        <article class="card box">
+          <h2 class="card_title">
+            Фритрек и нулевой спринт: Подготовка к работе
+          </h2>
+          <div class="image_box">
+            <img src="./images/bus1.png" alt="автобус при фиолетовом закате" class="card_image" />
+            <p class="card_label">&lt;/HTML&gt;</p>
+          </div>
+          <div class="card_content">
+            <p class="card_text">
+              Это было самое начало пути. На этом этапе важно было проникнуться основами
+               и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять
+                на ваше будущее.
+            </p>
+            <p class="card_text">
+              Место для ваших воспоминаний о начале обучения.
+            </p>
+            <div class="card_like">
+              <button class="card__icon-button">
+                <img class="like-icon is-liked" src="./svg/heart.svg" alt="маленькое сердечко" />
+              </button>
+              <button class="card__like-button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </div>
+        </article> 
+      </section>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
