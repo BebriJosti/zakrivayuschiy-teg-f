@@ -360,12 +360,12 @@
   min-width: 130px;
   min-height: 38px;
   border: 2px solid var(--accent-color, #000);
-  color: var(--accent-color, #000);
   font-family: var(--accent-font, sans-serif);
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
   text-transform: uppercase;
+  background-color: var(--bkg-color, #000);
   cursor: pointer;
 }
 
@@ -394,4 +394,39 @@
   .header {
     padding-top: 120px;
   }
+}
+
+/*написано что можно любые фильтры делать, поэтому не как в макете наделал */
+
+.filter_a {
+  filter: hue-rotate(40deg) saturate(150%) brightness(110%) contrast(110%)
+    sepia(20%) grayscale(20%);
+}
+
+.filter_b {
+  filter: sepia(30%) saturate(70%) contrast(120%);
+}
+
+.filter_c {
+  filter: hue-rotate(30deg) saturate(120%) brightness(120%);
+}
+
+.filter_d {
+  filter: hue-rotate(-30deg) saturate(120%) brightness(120%);
+}
+
+.filter_e {
+  filter: blur(5px) hue-rotate(30deg) saturate(120%) brightness(120%);
+}
+
+.filter_f {
+  filter: sepia(50%);
+}
+
+.filter_g {
+  filter: contrast(120%) brightness(120%);
+}
+
+.filter_h {
+  filter: brightness(250%);
 }
