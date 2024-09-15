@@ -1,12 +1,12 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
-:root{
-  --main-font: "Inter",sans-serif;
-  --accent-font:"PressStart2P",sans-serif;
+:root {
+  --main-font: "Inter", sans-serif;
+  --accent-font: "PressStart2P", sans-serif;
   --bkg-color: #fff;
   --accent-color: #000;
   --bkg-image: repeating-linear-gradient(
-    90deg,
+      90deg,
       #d3d3d3 0px,
       #d3d3d3 2px,
       transparent 2px,
@@ -20,13 +20,13 @@
       transparent 4px
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
-    --cards-title-weight: 700;
-    --cards-text-weight:400;
-    --label-color: white;
-    --mix-color:var(--bkg-color);
+  --cards-title-weight: 700;
+  --cards-text-weight: 400;
+  --label-color: white;
+  --mix-color: var(--bkg-color);
 
-    --heart-outline-color: var(--accent-color);
-    --heart-fill-color: #ff0000;
-    --heart-contour-color: var(--accent-color);
-    --heart-sparks-color: var(--heart-fill-color);
+  --heart-outline-color: var(--accent-color);
+  --heart-fill-color: #ff0000;
+  --heart-contour-color: var(--accent-color);
+  --heart-sparks-color: var(--heart-fill-color);
 }

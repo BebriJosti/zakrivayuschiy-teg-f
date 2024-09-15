@@ -51,21 +51,29 @@
             Фритрек и нулевой спринт: Подготовка к работе
           </h2>
           <div class="image_box">
-            <img src="./images/bus1.png" alt="автобус при фиолетовом закате" class="card_image" />
+            <img
+              src="./images/bus1.png"
+              alt="автобус при фиолетовом закате"
+              class="card_image"
+            />
             <p class="card_label">&lt;/HTML&gt;</p>
           </div>
           <div class="card_content">
             <p class="card_text">
-              Это было самое начало пути. На этом этапе важно было проникнуться основами
-               и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять
-                на ваше будущее.
+              Это было самое начало пути. На этом этапе важно было проникнуться
+              основами и настроиться на учёбу. И, возможно, подумать, как новые
+              знания могут повлиять на ваше будущее.
             </p>
             <p class="card_text">
               Место для ваших воспоминаний о начале обучения.
             </p>
 
             <div class="card_like">
-              <button class="card__icon-button" type="button" style="height: 36px;">
+              <button
+                class="card__icon-button"
+                type="button"
+                style="height: 36px"
+              >
                 <svg
                   class="like-icon"
                   width="39"
@@ -106,53 +114,53 @@
               </button>
             </div>
           </div>
-        </article> 
+        </article>
       </section>
       <section class="save">
         <button
-        class= "save-button box"
-        type="button"
-        onclick="window['save-dialog'].showModal()"
-        aria-controls="save-dialog"
-      >
-        <svg
-          class="button__icon"
-          width="39" height="39"
-          viewBox="0 0 39 39"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-
-        <span class="button__text">Сохранить на память</span>
-      </button>
-      <!-- окно диалога -->
-      <dialog id="save-dialog" class="save-dialog">
-        <div class="save-dialog__info-container">
-          <div>
-            <svg
-          class="button__icon"
-          width="39" height="39"
-          viewBox="0 0 39 39"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-  
-          </div>
-          <p class="save-dialog__text">Вставьте дискету, чтобы продолжить</p>
-        </div>
-        <button
-          class="save-dialog__button"
+          class="save-button box"
           type="button"
-          onclick="window['save-dialog'].close();"
+          onclick="window['save-dialog'].showModal()"
+          aria-controls="save-dialog"
         >
-          <span class="button__text">ok</span>
+          <svg
+            class="button__icon"
+            width="39"
+            height="39"
+            viewBox="0 0 39 39"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+
+          <span class="button__text">Сохранить на память</span>
         </button>
-      </dialog>
-  
+        <!-- окно диалога -->
+        <dialog id="save-dialog" class="save-dialog">
+          <div class="save-dialog__info-container">
+            <div>
+              <svg
+                class="button__icon"
+                width="39"
+                height="39"
+                viewBox="0 0 39 39"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use href="./svg/floppy.svg#floppy"></use>
+              </svg>
+            </div>
+            <p class="save-dialog__text">Вставьте дискету, чтобы продолжить</p>
+          </div>
+          <button
+            class="save-dialog__button"
+            type="button"
+            onclick="window['save-dialog'].close();"
+          >
+            <span class="button__text">ok</span>
+          </button>
+        </dialog>
       </section>
     </main>
     <script src="./scripts/like.js"></script>

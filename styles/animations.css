@@ -14,22 +14,22 @@
 */
 
 @keyframes HeaderArrow {
-    from {
-      transform: translateX(-4px);
-    }
-  
-    to {
-      transform: translateX(0);
-    }
+  from {
+    transform: translateX(-4px);
   }
- 
-  @keyframes slideIn {
-    0% {
-        transform: scaleX(0); 
-    }
-    100% {
-        transform: scaleX(1); 
-    }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 @keyframes changeBlendMode {
@@ -50,7 +50,7 @@
     opacity: 1;
   }
 }
- 
+
 .core {
   fill: transparent;
   transition: fill 0.3s 0.03s linear;
@@ -66,8 +66,8 @@
   transition: fill 0.3s linear;
 }
 
-.sparks{
-  fill:transparent;
+.sparks {
+  fill: transparent;
 }
 
 .card__icon-button:hover .main-body {
@@ -91,12 +91,12 @@
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--heart-fill-color );
+  fill: var(--heart-fill-color);
   transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--heart-fill-color );
+  fill: var(--heart-fill-color);
   transition: fill 0.3s 0.06s linear;
 }
 
