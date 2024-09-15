@@ -4,3 +4,91 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root.theme-light {
+  --main-font: "Inter", sans-serif;
+  --accent-font: "PressStart2P", sans-serif;
+  --bkg-color: #fff;
+  --accent-color: #000;
+  --bkg-image: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --cards-title-weight: 700;
+  --cards-text-weight: 400;
+  --label-color: white;
+  --mix-color:var(--accent-color);
+  --mix-end-color:var(--bkg-color);
+
+}
+
+
+:root.theme-dark {
+    --main-font: "Inter", sans-serif;
+    --accent-font: "PressStart2P", sans-serif;
+    --bkg-color: black;
+    --accent-color: #00CC14;
+    --bkg-image: repeating-linear-gradient(
+        90deg,
+        #000000 0px,
+        #000000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        #000000 0px,
+        #000000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(to bottom, #007F0C 0.01%, #004306 100%);
+    --cards-title-weight: 785;
+    --cards-text-weight: 465;
+    --label-color: #00CC14;
+    --mix-color:var(--accent-color);
+    --mix-end-color:var(--bkg-color);
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font: "Inter", sans-serif;
+    --accent-font: "PressStart2P", sans-serif;
+    --bkg-color: black;
+    --accent-color: #00CC14;
+    --bkg-image: repeating-linear-gradient(
+        90deg,
+        #000000 0px,
+        #000000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        #000000 0px,
+        #000000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(to bottom, #007F0C 0.01%, #004306 100%);
+    --cards-title-weight: 785;
+    --cards-text-weight: 465;
+    --label-color: #00CC14;
+    --mix-color:var(--accent-color);
+    --mix-end-color:var(--bkg-color);
+  }
+}
