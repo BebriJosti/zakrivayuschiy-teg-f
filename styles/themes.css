@@ -29,47 +29,43 @@
   --cards-title-weight: 700;
   --cards-text-weight: 400;
   --label-color: white;
-  --mix-color:var(--accent-color);
-  --mix-end-color:var(--bkg-color);
-
+  --mix-color: var(--accent-color);
+  --mix-end-color: var(--bkg-color);
 }
-
 
 :root.theme-dark {
-    --main-font: "Inter", sans-serif;
-    --accent-font: "PressStart2P", sans-serif;
-    --bkg-color: black;
-    --accent-color: #00CC14;
-    --bkg-image: repeating-linear-gradient(
-        90deg,
-        #000000 0px,
-        #000000 2px,
-        transparent 2px,
-        transparent 4px
-      ),
-      repeating-linear-gradient(
-        0deg,
-        #000000 0px,
-        #000000 2px,
-        transparent 2px,
-        transparent 4px
-      ),
-      linear-gradient(to bottom, #007F0C 0.01%, #004306 100%);
-    --cards-title-weight: 785;
-    --cards-text-weight: 465;
-    --label-color: #00CC14;
-    --mix-color:var(--accent-color);
-    --mix-end-color:var(--bkg-color);
+  --main-font: "Inter", sans-serif;
+  --accent-font: "PressStart2P", sans-serif;
+  --bkg-color: black;
+  --accent-color: #00cc14;
+  --bkg-image: repeating-linear-gradient(
+      90deg,
+      #000000 0px,
+      #000000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      #000000 0px,
+      #000000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
+  --cards-title-weight: 785;
+  --cards-text-weight: 465;
+  --label-color: #00cc14;
+  --mix-color: var(--accent-color);
+  --mix-end-color: var(--bkg-color);
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   :root {
     --main-font: "Inter", sans-serif;
     --accent-font: "PressStart2P", sans-serif;
     --bkg-color: black;
-    --accent-color: #00CC14;
+    --accent-color: #00cc14;
     --bkg-image: repeating-linear-gradient(
         90deg,
         #000000 0px,
@@ -84,11 +80,11 @@
         transparent 2px,
         transparent 4px
       ),
-      linear-gradient(to bottom, #007F0C 0.01%, #004306 100%);
+      linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
     --cards-title-weight: 785;
     --cards-text-weight: 465;
-    --label-color: #00CC14;
-    --mix-color:var(--accent-color);
-    --mix-end-color:var(--bkg-color);
+    --label-color: #00cc14;
+    --mix-color: var(--accent-color);
+    --mix-end-color: var(--bkg-color);
   }
 }

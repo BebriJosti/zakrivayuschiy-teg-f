@@ -23,8 +23,8 @@
   --cards-title-weight: 700;
   --cards-text-weight: 400;
   --label-color: white;
-  --mix-color: var(--bkg-color);
-
+  --mix-color:var(--accent-color);
+  --mix-end-color:var(--bkg-color);
   --heart-outline-color: var(--accent-color);
   --heart-fill-color: #ff0000;
   --heart-contour-color: var(--accent-color);
