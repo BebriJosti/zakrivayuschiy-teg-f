@@ -51,6 +51,15 @@
   }
 }
 
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
 .core {
   fill: transparent;
   transition: fill 0.3s 0.03s linear;

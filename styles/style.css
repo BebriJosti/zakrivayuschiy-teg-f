@@ -31,6 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   margin: 0 0 100px 0;
   font-family: var(--accent-font);
   background-color: var(--bkg-color);
@@ -41,17 +42,17 @@
 }
 
 .head_title {
-  padding-top: clamp(7.5rem, 0rem + 100vw, 8.5rem);
+  padding-top: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);
   padding-bottom: 20px;
   font-weight: 700;
-  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
   line-height: normal;
   text-transform: uppercase;
 }
 
 .head_subtitle {
   font-weight: 400;
-  font-size: clamp(0.875rem, 0rem + 1600vw, 1.438rem);
+  font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   line-height: normal;
   text-transform: uppercase;
 }
@@ -60,7 +61,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 21px 0;
+  padding: 25px 0;
   padding-left: 13px;
 }
 
@@ -73,6 +74,7 @@
 .theme-menu__button {
   position: relative;
   border: none;
+  padding: 0;
   opacity: 1;
   font-size: 14px;
   text-transform: uppercase;
@@ -85,7 +87,7 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
-  left: -10px;
+  left: -16px;
   animation: HeaderArrow 0.5s ease-in-out infinite alternate;
 }
 
@@ -130,6 +132,7 @@
 
 .card {
   position: relative;
+  width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   margin: 0 0 50px 0;
   background-color: var(--bkg-color);
 }
@@ -149,6 +152,8 @@
 
 .image_box {
   position: relative;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .card_label {
@@ -156,14 +161,13 @@
   top: 0;
   right: 0;
   padding-top: 25px;
-  padding-right: clamp(0.813rem, 0rem + 100vw, 1.563rem);
+  padding-right: clamp(0.813rem, 0.548rem + 1.127vw, 1.563rem);
   opacity: 0.5;
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
   text-shadow: -1px -1px 0 var(--label-color), 1px -1px 0 var(--label-color),
     -1px 1px 0 var(--label-color), 1px 1px 0 var(--label-color);
-  mix-blend-mode: hard-light;
 }
 
 @supports ((text-stroke: 2px #fff) or (-webkit-text-stroke: 2px #fff)) {
@@ -194,6 +198,7 @@
 }
 
 .card__icon-button {
+  height: 36px;
   margin: 0 6px 0 0;
   border: none;
   padding: 0;
@@ -201,13 +206,21 @@
   cursor: pointer;
 }
 
-.card__like-button {
+.button {
   position: relative;
-  border: 2px solid var(--accent-color);
-  padding: 8px 36px;
   overflow: hidden;
-  background: none;
   cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.card__like-button {
+  width: 130px;
+  border: 2px solid var(--accent-color);
+  padding: 8px 0;
+  background: none;
 }
 
 .card__like-button::before {
@@ -226,41 +239,25 @@
   transform: translateX(100%);
 }
 
-.card__like-button:focus,
-.save-button:focus {
-  outline: none;
-}
-
 .card__like-button:focus-visible,
-.save-button:focus-visible {
+.save-button:focus-visible,
+.save-dialog__button:focus-visible {
   box-shadow: 2px 2px 0px var(--accent-color);
   transition: box-shadow 0.3s ease;
 }
 
-/* .card__like-button .button__text {
-  margin-top: 2px;
-}
-
-.button__text {
-  font-family: var(--accent-font);
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--mix-color);
-  z-index: 2;
-  mix-blend-mode: difference;
-  transition: color 0.3s ease;
-} */
-
 .card__like-button:hover .button__text,
 .save-button:hover .button__text,
-.save-button:hover .button__icon {
+.save-button:hover .button__icon,
+.save-dialog__button:hover .button__text {
   color: var(--mix-end-color);
   transition: color 0.3s ease;
 }
 
 .card__like-button .button__text,
 .save-button .button__text,
-.save-button .button__icon {
+.save-button .button__icon,
+.save-dialog__button .button__text {
   position: relative;
   z-index: 2;
   margin-top: 2px;
@@ -272,19 +269,17 @@
 }
 
 .save-button {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
   margin: auto;
   padding: 15px 21px 15px 19px;
-  overflow: hidden;
   background-color: var(--bkg-color);
-  cursor: pointer;
 }
 
-.save-button::before {
+.save-button::before,
+.save-dialog__button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -296,7 +291,8 @@
   transform: translateX(0);
 }
 
-.save-button:hover::before {
+.save-button:hover::before,
+.save-dialog__button:hover::before {
   transform: translateX(100%);
 }
 
@@ -304,13 +300,6 @@
   width: 21px;
   height: 21px;
 }
-
-/* .button__icon {
-  color: var(--mix-color);
-  z-index: 2;
-  mix-blend-mode: difference;
-  transition:  0.3s ease;
-}  */
 
 .card__icon-button:focus {
   outline: none;
@@ -365,7 +354,11 @@
   line-height: 90%;
   text-transform: uppercase;
   background-color: var(--bkg-color, #000);
-  cursor: pointer;
+}
+
+.button__icon {
+  width: 39px;
+  height: 39px;
 }
 
 .save-dialog::backdrop {
@@ -389,45 +382,40 @@
   .card-title {
     padding: 4px 10px 6px 12px;
   }
-
-  .header {
-    padding-top: 120px;
-  }
 }
 
 /*написано что можно любые фильтры делать, поэтому не как в макете наделал */
 
-.filter_a {
-  filter: hue-rotate(40deg) saturate(150%) brightness(110%) contrast(110%)
-    sepia(20%) grayscale(20%);
+.filter_contrast {
+  filter: contrast(1.2) brightness(1.1);
 }
 
-.filter_b {
-  filter: sepia(30%) saturate(70%) contrast(120%);
+.filter_sepia {
+  filter: sepia(1);
 }
 
-.filter_c {
-  filter: hue-rotate(30deg) saturate(120%) brightness(120%);
+.filter_grayscale {
+  filter: grayscale(1);
 }
 
-.filter_d {
-  filter: hue-rotate(-30deg) saturate(120%) brightness(120%);
+.filter_saturate {
+  filter: saturate(0.5);
 }
 
-.filter_e {
-  filter: blur(5px) hue-rotate(30deg) saturate(120%) brightness(120%);
+.filter_invert {
+  filter: invert(1);
 }
 
-.filter_f {
-  filter: sepia(50%);
+.filter_sharpness {
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
 
-.filter_g {
-  filter: contrast(120%) brightness(120%);
+.filter_blur {
+  filter: blur(5px);
 }
 
-.filter_h {
-  filter: brightness(250%);
+.filter_blur_saturate_sepia {
+  filter: blur(5px) saturate(0.5) sepia(1);
 }
 
 .card_label_uppercase {
