@@ -245,14 +245,13 @@
 }
 
 .button:hover .button__text,
-.button:hover .button__icon{
+.button:hover .button__icon {
   color: var(--mix-end-color);
   transition: color 0.3s ease;
 }
 
 .button .button__text,
-.button .button__icon
- {
+.button .button__icon {
   position: relative;
   z-index: 2;
   margin-top: 2px;
@@ -272,7 +271,6 @@
   padding: 15px 21px 15px 19px;
   background-color: var(--bkg-color);
 }
-
 
 .save-button .button__icon {
   width: 21px;
