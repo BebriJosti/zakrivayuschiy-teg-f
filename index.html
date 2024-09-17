@@ -22,7 +22,7 @@
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">
+            <button type="button" data-theme="dark" class="theme-menu__button ">
               Темно
             </button>
           </li>
@@ -69,7 +69,11 @@
             </p>
 
             <div class="card_like">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+                
+              >
                 <svg
                   class="like-icon"
                   width="39"
@@ -134,7 +138,10 @@
             </p>
 
             <div class="card_like">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"       
+              >
                 <svg
                   class="like-icon"
                   width="39"
@@ -197,7 +204,11 @@
             </p>
 
             <div class="card_like">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+               
+              >
                 <svg
                   class="like-icon"
                   width="39"
@@ -262,7 +273,11 @@
             </p>
 
             <div class="card_like">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+               
+              >
                 <svg
                   class="like-icon"
                   width="39"
@@ -328,7 +343,11 @@
             </p>
 
             <div class="card_like">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+               
+              >
                 <svg
                   class="like-icon"
                   width="39"
@@ -391,7 +410,11 @@
             </p>
 
             <div class="card_like">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+               
+              >
                 <svg
                   class="like-icon"
                   width="39"
@@ -456,7 +479,11 @@
             </p>
 
             <div class="card_like">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+               
+              >
                 <svg
                   class="like-icon"
                   width="39"
@@ -522,7 +549,11 @@
             </p>
 
             <div class="card_like">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+              
+              >
                 <svg
                   class="like-icon"
                   width="39"
@@ -565,52 +596,52 @@
           </div>
         </article>
       </section>
-      <!--коммент чтобы удобно карточки размножать-->
-      <button
-        class="save-button button box"
-        type="button"
-        onclick="window['save-dialog'].showModal()"
-        aria-controls="save-dialog"
-      >
-        <svg
-          class="button__icon"
-          width="39"
-          height="39"
-          viewBox="0 0 39 39"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-
-        <span class="button__text">Сохранить на память</span>
-      </button>
-      <!-- окно диалога -->
-      <dialog id="save-dialog" class="save-dialog">
-        <div class="save-dialog__info-container">
-          <div>
-            <!--нужен для корректной отрисовки иконки-->
-            <svg
-              class="button__icon"
-              width="39"
-              height="39"
-              viewBox="0 0 39 39"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <use href="./svg/floppy.svg#floppy"></use>
-            </svg>
-          </div>
-          <p class="save-dialog__text">Вставьте дискету, чтобы продолжить</p>
-        </div>
+      <!--коммент чтобы удобно карточки размножать-->     
         <button
-          class="save-dialog__button button"
+          class="save-button button box"
           type="button"
-          onclick="window['save-dialog'].close();"
+          onclick="window['save-dialog'].showModal()"
+          aria-controls="save-dialog"
         >
-          <span class="button__text">ok</span>
+          <svg
+            class="button__icon"
+            width="39"
+            height="39"
+            viewBox="0 0 39 39"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+
+          <span class="button__text">Сохранить на память</span>
         </button>
-      </dialog>
+        <!-- окно диалога -->
+        <dialog id="save-dialog" class="save-dialog">
+          <div class="save-dialog__info-container">    
+            <div>  <!--нужен для корректной отрисовки иконки-->
+              <svg
+                class="button__icon"
+                width="39"
+                height="39"
+                viewBox="0 0 39 39"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use href="./svg/floppy.svg#floppy"></use>
+              </svg>
+              </div>
+              <p class="save-dialog__text">Вставьте дискету, чтобы продолжить</p>
+            </div>                  
+          </div>
+          <button
+            class="save-dialog__button button"
+            type="button"
+            onclick="window['save-dialog'].close();"
+          >
+            <span class="button__text">ok</span>
+          </button>
+        </dialog>     
     </main>
     <script src="./scripts/like.js"></script>
   </body>
